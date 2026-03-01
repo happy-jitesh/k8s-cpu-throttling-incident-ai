@@ -3,7 +3,29 @@
 This project demonstrates a real-world **Agentic AI system** that automatically
 detects, analyzes, and resolves Kubernetes incidents using an LLM.
 
-CPU throttling is a VERY realistic production issue and much more advanced than restart demos.
+CPU throttling is a VERY realistic production issue.
+
+## What Is CPU Throttling?
+
+- Container hits CPU limit
+- Linux CFS throttles it
+- App slows down
+- No CrashLoop
+- No OOMKilled
+- But performance degrades
+
+## Features
+- Detect high CPU pressure
+- Read current CPU limits
+- Send context to Llama3
+- Decide:
+   - NCREASE_CPU_LIMIT
+   - SCALE_DEPLOYMENT
+   - DO_NOTHING
+   - ESCALATE
+- Patch deployment
+- Rolling restart
+- Verify
 
 ## Use Hetzner cloud for running kubernetes and local LLM
 
@@ -35,27 +57,7 @@ CPU throttling is a VERY realistic production issue and much more advanced than 
 - Ollama
 - llama3
 
-## What Is CPU Throttling?
 
-- Container hits CPU limit
-- Linux CFS throttles it
-- App slows down
-- No CrashLoop
-- No OOMKilled
-- But performance degrades
-
-## Features
-- Detect high CPU pressure
-- Read current CPU limits
-- Send context to Llama3
-- Decide:
-   - NCREASE_CPU_LIMIT
-   - SCALE_DEPLOYMENT
-   - DO_NOTHING
-   - ESCALATE
-- Patch deployment
-- Rolling restart
-- Verify
 
 ## Architecture
 Observe → Reason → Decide → Act → Learn

@@ -37,8 +37,12 @@ Observe → Reason → Decide → Act → Learn
 - Ollama
 - llama3
 
-
+## Install Python dependency
+```bash
+pip install -r requirements.txt
+```
 ## Setup
+
 
 ## K8S INCIDENT SIMULATION (CPU Throttling)
 
@@ -46,8 +50,6 @@ Observe → Reason → Decide → Act → Learn
 
 kubectl create namespace prod
 kubectl apply -f k8s-infra/cpu-hog.yaml
-
-pip install -r requirements.txt
 
 ```
 

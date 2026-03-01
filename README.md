@@ -19,7 +19,7 @@ CPU throttling is a VERY realistic production issue.
 - Read current CPU limits
 - Send context to Llama3
 - Decide:
-   - NCREASE_CPU_LIMIT
+   - INCREASE_CPU_LIMIT
    - SCALE_DEPLOYMENT
    - DO_NOTHING
    - ESCALATE
